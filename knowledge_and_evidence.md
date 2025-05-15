@@ -113,7 +113,7 @@ python3 main.py
    | ----------              |-------|----------------------|
    | built-in primitive type | dimmed| True                 |
    | built-in composite type | YELLOW | (255, 255, 0)        |
-   | user-defined type       |self.sense_hat.low_light| dimmed which is True |
+   | user-defined type       |self.sense_hat.low_light| True |
 
 2. Fill in (`_`) the following table based on the code in `smiley.py`:
 
@@ -126,10 +126,10 @@ python3 main.py
 3. Examine the code for `smiley.py`, `sad.py`, and `happy.py`. Give an example of each of the following control structures using an example from **each** of these files. Include the first line and the line range:
 
    | Control Flow | File     | First line | Line range |
-   | ------------ |----------|------------|------------|
-   |  sequence    | sad.py   | 15         | 15         |
-   |  selection   | sad.py   | 26         | 26 - 29    |
-   |  iteration   | happy.py | 21         | 21 - 22    |
+   | ------------ |----------|------|------------|
+   |  sequence    | sad.py   |      | 15         |
+   |  selection   | sad.py   |      | 26 - 29    |
+   |  iteration   | happy.py |      | 21 - 22    |
 
 4. Though everything in Python is an object, it is sometimes said to have four "primitive" types. Examining the three files `smiley.py`, `sad.py`, and `happy.py`, identify which of the following types are used in any of these files, and give an example of each (use an example from the code, if applicable, otherwise provide an example of your own):
 
@@ -161,7 +161,7 @@ python3 main.py
 
 1. What code style is used in the code? Is it likely to be the same as the code style used in the SenseHat? Give to reasons as to why/why not:
    
-> OOP (Object-Oriented Programming). SenseHat follows a similar modular programming style with the call of functions. Furthermore, the workings of SenseHat is encapsulated. Both indicative that SenseHat is likely to on the guidelines of OOP. 
+> OOP (Object-Oriented Programming). SenseHat follows the PEP 8 guidelines for naming a class ie CamelCase convention. It follows a modular programming style with the call of functions. Furthermore, the workings of SenseHat is encapsulated. All indicative that SenseHat is likely to on the guidelines of OOP. 
 >
 
 2. List three aspects of this convention you see applied in the code.
@@ -191,7 +191,7 @@ python3 main.py
 
 2. Explain the concept of abstraction, giving an example from the project (note "implementing an ABC" is **not** in itself an example of abstraction). (Max 150 words)
 
-> Abstraction is the process of including only essential information from a whole process in a class and omitting complex internal implementation details if they are not relevant to the current project. This class only forms a blueprint for other classes and cannot be initiated. It can contain abstract methods and interfaces. The specific task behaviours are defined in sub-class methods as required and not in the abstract class. The abc (Abstract Base Class) module is used to create abstract classes and interfaces where all methods specified in the abstract class as place holders need to have relevant code in the subclass which links to the abstract super class. 
+> Abstraction is the process of including only essential information from a whole process in a class and omitting complex internal implementation details if they are not relevant to the current project. This class only forms a blueprint for a class and cannot be initiated. The specific task behaviours are defined in sub-class methods as required and not in the abstract class. An example is the Blinkable class and blink method (in blink.py) which is inherited and coded in class Happy. The abc (Abstract Base Class) module is used to create abstract classes and interfaces where all methods specified in the abstract class as place holders need to have relevant code in the subclass which links to the abstract super class. 
 
 >In happy.py, class Happy has a parent class Blinkable which has an abs class Blinkable and method blink() as a blueprint. Because of this, class Happy has to have a method called blink() with the code for the specific required behaviour.
 
@@ -238,7 +238,7 @@ Unlike the `Happy` smiley, the current implementation of the `Sad` smiley does n
 
 1. Does the code's author believe that every `Smiley` should be able to blink? Explain.
 
-> Currently, the coder has incorporated a blink() module for the Happy class only (meaning that only a happy smiley has a blink option) and not for the Sad class. Some smileys can be changed to enable blink such as sad. However, blink may not apply for all emotions (example angry where angry people usually do not blink). 
+> Currently, the coder has incorporated a blink() module for the Happy class only (meaning that only a happy smiley has a blink option) and not for the Sad class. The coder has made the blink functionality as a super class and it can be incorporated into any smiley as required by including Blinkable class in the list of parent classes. Some smileys can be changed to enable blink such as sad. However, blink may not apply for all emotions (example angry where angry people usually do not blink). 
 >
 
 2. For those smileys that blink, does the author expect them to blink in the same way? Explain.
