@@ -127,9 +127,9 @@ python3 main.py
 
    | Control Flow | File     | First line | Line range |
    | ------------ |----------|------|------------|
-   |  sequence    | sad.py   |      | 15         |
-   |  selection   | sad.py   |      | 26 - 29    |
-   |  iteration   | happy.py |      | 21 - 22    |
+   |  sequence    | sad.py   | mouth = [49, 54, 42, 43, 44, 45]     | 15         |
+   |  selection   | sad.py   |  if wide_open:    | 26 - 29    |
+   |  iteration   | happy.py |   for pixel in mouth:   | 21 - 22    |
 
 4. Though everything in Python is an object, it is sometimes said to have four "primitive" types. Examining the three files `smiley.py`, `sad.py`, and `happy.py`, identify which of the following types are used in any of these files, and give an example of each (use an example from the code, if applicable, otherwise provide an example of your own):
 
@@ -161,12 +161,12 @@ python3 main.py
 
 1. What code style is used in the code? Is it likely to be the same as the code style used in the SenseHat? Give to reasons as to why/why not:
    
-> OOP (Object-Oriented Programming). SenseHat follows the PEP 8 guidelines for naming a class ie CamelCase convention. It follows a modular programming style with the call of functions. Furthermore, the workings of SenseHat is encapsulated. All indicative that SenseHat is likely to on the guidelines of OOP. 
+>  PEP 8. It is likely that SenseHat uses the same code style because class names are Cap Words convention, function & variable names are lowercase with words separated by underscores.
 >
 
 2. List three aspects of this convention you see applied in the code.
 
-> Inheritance, Encapsulation, Polymorphism
+>Class names are Cap Word convention. 4 space indentation convention has been used within Classes and methods. Function names are lowercase with words separated by underscores.   
 >
 
 3. Give two examples of organizational documentation in the code.
