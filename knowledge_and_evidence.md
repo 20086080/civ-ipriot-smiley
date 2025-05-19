@@ -191,7 +191,7 @@ python3 main.py
 
 2. Explain the concept of abstraction, giving an example from the project (note "implementing an ABC" is **not** in itself an example of abstraction). (Max 150 words)
 
-> Abstraction is the process of including only essential information from a whole process in a class and omitting complex internal implementation details if they are not relevant to the current project. This class only forms a blueprint for a class and cannot be initiated. The specific task behaviours are defined in sub-class methods as required and not in the abstract class. An example is the Blinkable class and blink method (in blink.py) which is inherited and coded in class Happy. The abc (Abstract Base Class) module is used to create abstract classes and interfaces where all methods specified in the abstract class as place holders need to have relevant code in the subclass which links to the abstract super class. 
+> Abstraction is the process of including only essential information from a whole process in a class and omitting complex internal implementation details if they are not relevant to the current project. This class only forms a blueprint for a class and cannot be initiated. The specific task behaviours are defined in subclass methods as required and not in the abstract class. An example is the Blinkable class and blink method (in blink.py) which is inherited and coded in class Happy. The abc (Abstract Base Class) module is used to create abstract classes and interfaces where all methods specified in the abstract class as place-holders need to have relevant code in the subclass which links to the abstract super class. 
 
 >In happy.py, class Happy has a parent class Blinkable which has an abs class Blinkable and method blink() as a blueprint. Because of this, class Happy has to have a method called blink() with the code for the specific required behaviour.
 
@@ -253,7 +253,7 @@ Unlike the `Happy` smiley, the current implementation of the `Sad` smiley does n
 
 4. How is inheritance used in the blink method, and why is it important for polymorphism?
 
-> Sad and Happy classes have Blinkable as the parent class with the method blink in it as an abstract method (once Sad is set-up with blink method). Both classes have individual blink methods set-up for each class's individual requirements. Inheritance is important for polymorphism because it provides the hierarchy structure which states which method calls are common to base and child classes. 
+> Sad and Happy classes have Blinkable as the parent class with the method blink in it as an abstract method (once Sad is set up with blink method). Both classes have individual blink methods set-up for each class's individual requirements. Inheritance is important for polymorphism because it provides the hierarchy structure which states which method calls are common to base and child classes. 
 >
 1. **Implement Blink in Sad Class:**
 
@@ -286,15 +286,15 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
   1. **Class Type Analysis:** What kind of class is `Blinkable`? Inspect its superclass for clues about its classification.
 
-     > abstract class 
+     > Abstract class created using the abc module and the ABC class 
 
   2. **Class Implementation:** `Blinkable` is a class intended to be implemented by other classes. What generic term describes this kind of class, which is designed for implementation by others? **Clue**: Notice the lack of any concrete implementation and the naming convention.
 
-  > Your answer here
+  > Abstract class using abc module and the ABC class (denoted by the @abstractmethod).
 
   3. **OO Principle Identification:** Regarding your answer to question (2), which Object-Oriented (OO) principle does this represent? Choose from the following and justify your answer in 1-2 sentences: Abstraction, Polymorphism, Inheritance, Encapsulation.
 
-  > Your answer here
+  > Abstraction which is the process of hiding complex functioning and stating only the essential features of an object. Blinkable cannot be implemented and is declared as an abstract class. It has one method blink which is a placeholder and leaves the actual implementation to be defined in the subclasses.  
 
   4. **Implementation Flexibility:** Explain why you could grant the Sad Smiley a blinking feature similar to the Happy Smiley's implementation, even without directly using `Blinkable`.
 
