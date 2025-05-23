@@ -1,11 +1,10 @@
 import time
-from blinkable import Blinkable
 from smiley import Smiley
 
 
-class Sad(Smiley, Blinkable):
+class Angry(Smiley):
     def __init__(self):
-        super().__init__(complexion = self.BLUE)
+        super().__init__(complexion = self.RED)
 
         self.draw_mouth()
         self.draw_eyes()
@@ -14,7 +13,7 @@ class Sad(Smiley, Blinkable):
         """
         Draws the mouth feature on a smiley
         """
-        mouth = [49, 54, 42, 43, 44, 45]
+        mouth = [46, 41, 42, 43, 44, 45]
         for pixel in mouth:
             self.pixels[pixel] = self.BLANK
 
@@ -30,15 +29,3 @@ class Sad(Smiley, Blinkable):
             else:
                 eyes = self.complexion()    #self.YELLOW
             self.pixels[pixel] = eyes
-
-    def blink(self, delay=0.25):
-        """
-       Blinks the smiley's eyes once
-
-        :param delay: Delay between blinks (in seconds)
-        """
-        self.draw_eyes(wide_open=False)
-        self.show()
-        time.sleep(delay)
-        self.draw_eyes(wide_open=True)
-        self.show()

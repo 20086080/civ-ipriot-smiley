@@ -8,7 +8,7 @@ class Happy(Smiley, Blinkable):
    Provides a Smiley with a happy expression
     """
     def __init__(self):
-        super().__init__()
+        super().__init__(complexion = self.YELLOW)
 
         self.draw_mouth()
         self.draw_eyes()
@@ -28,7 +28,7 @@ class Happy(Smiley, Blinkable):
         """
         eyes = [10, 13, 18, 21]
         for pixel in eyes:
-            self.pixels[pixel] = self.BLANK if wide_open else self.YELLOW
+            self.pixels[pixel] = self.BLANK if wide_open else self.complexion()  #self.YELLOW
 
     def blink(self, delay=0.25):
         """
