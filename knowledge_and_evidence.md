@@ -109,18 +109,18 @@ python3 main.py
 
 1. Examine the code for the `smiley.py` file and provide  an example of a variable of each of the following types and their corresponding values (`_` should be replaced with the appropriate values):
 
-   | Type                    | name  | value                |
-   | ----------              |-------|----------------------|
-   | built-in primitive type | dimmed| True                 |
-   | built-in composite type | YELLOW | (255, 255, 0)        |
-   | user-defined type       |self.sense_hat.low_light| True |
+   | Type                    | name       | value       |
+   | ----------              |------------|-------------|
+   | built-in primitive type | dimmed     | True        |
+   | built-in composite type | YELLOW     | (255, 255, 0) |
+   | user-defined type       | class Smiley | N/A        |
 
 2. Fill in (`_`) the following table based on the code in `smiley.py`:
 
-   | Object                   | Type                      |
-   | ------------             |---------------------------|
-   | self.pixels              | list                      |
-   | A member of self.pixels  | tuple                     |
+   | Object                   | Type                     |
+   | ------------             |--------------------------|
+   | self.pixels              | list                     |
+   | A member of self.pixels  | tuple                    |
    | self                     | <class '__main__.smiley'> |
 
 3. Examine the code for `smiley.py`, `sad.py`, and `happy.py`. Give an example of each of the following control structures using an example from **each** of these files. Include the first line and the line range:
